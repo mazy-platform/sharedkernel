@@ -7,7 +7,7 @@ namespace MazyPlatform.SharedKernel.Domain.Results;
 /// или коллекцию ошибок в случае неудачи.
 /// </summary>
 /// <typeparam name="T">Тип возвращаемого значения при успешном результате.</typeparam>
-public sealed record class Result<T> : Result
+public sealed record class Result<T> : Result where T : notnull
 {
     /// <summary>
     /// Создаёт успешный результат с указанным значением.
