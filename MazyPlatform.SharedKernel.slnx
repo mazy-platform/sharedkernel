@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/MazyPlatform.SharedKernel.Api/MazyPlatform.SharedKernel.Api.csproj" />
+    <Project Path="src/MazyPlatform.SharedKernel.Application/MazyPlatform.SharedKernel.Application.csproj" />
+    <Project Path="src/MazyPlatform.SharedKernel.Domain/MazyPlatform.SharedKernel.Domain.csproj" />
+    <Project Path="src/MazyPlatform.SharedKernel.Infrastructure/MazyPlatform.SharedKernel.Infrastructure.csproj" />
+  </Folder>
+</Solution>
