@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MazyPlatform.SharedKernel.Domain\MazyPlatform.SharedKernel.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
