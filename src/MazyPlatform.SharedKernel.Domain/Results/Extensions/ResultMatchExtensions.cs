@@ -33,7 +33,7 @@ public static class ResultMatchExtensions
     /// <param name="onSuccess">Функция, вызываемая при успешном результате, получает значение <typeparamref name="TValue"/>.</param>
     /// <param name="onFailure">Функция, вызываемая при неудачном результате, получает <see cref="ErrorCollection"/>.</param>
     /// <returns>Значение типа <typeparamref name="T"/>, возвращённое соответствующим обработчиком.</returns>
-    public static T Match<T, TValue>(this Result<TValue> result, Func<TValue, T> onSuccess, Func<ErrorCollection, T> onFailure)
+    public static T Match<T, TValue>(this Result<TValue> result, Func<TValue, T> onSuccess, Func<ErrorCollection, T> onFailure) where TValue : notnull
     {
         return result.IsSuccess
                 ? onSuccess(result.Value)
@@ -65,7 +65,7 @@ public static class ResultMatchExtensions
     /// <param name="onSuccess">Функция, вызываемая при успешном результате, получает значение <typeparamref name="TValue"/>.</param>
     /// <param name="onFailure">Функция, вызываемая при неудачном результате, получает <see cref="ErrorCollection"/>.</param>
     /// <returns>Задача, возвращающая значение типа <typeparamref name="T"/>, полученное от соответствующего обработчика.</returns>
-    public static async Task<T> MatchAsync<T, TValue>(this Task<Result<TValue>> resultTask, Func<TValue, T> onSuccess, Func<ErrorCollection, T> onFailure)
+    public static async Task<T> MatchAsync<T, TValue>(this Task<Result<TValue>> resultTask, Func<TValue, T> onSuccess, Func<ErrorCollection, T> onFailure) where TValue : notnull
     {
         var result = await resultTask.ConfigureAwait(false);
         return result.IsSuccess
