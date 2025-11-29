@@ -1,13 +1,20 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net10.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net10.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\MazyPlatform.SharedKernel.Domain\MazyPlatform.SharedKernel.Domain.csproj" />
-  </ItemGroup>
+	<PropertyGroup>
+		<PackageId>MazyPlatform.SharedKernel.Application</PackageId>
+		<Version>0.1.0-preview</Version>
+		<Authors>Mazy-platform</Authors>
+		<RepositoryUrl>https://github.com/mazy-platform/sharedkernel</RepositoryUrl>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\MazyPlatform.SharedKernel.Domain\MazyPlatform.SharedKernel.Domain.csproj" />
+	</ItemGroup>
 
 </Project>
